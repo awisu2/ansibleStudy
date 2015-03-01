@@ -1,0 +1,7 @@
+---
+- hosts: test
+  remote_user: vagrant
+  sudo: yes
+  tasks:
+    - name: テンプレートをセット
+      action: template src=templates/sample.txt dest=/tmp/sample.txt

@@ -1,0 +1,3 @@
+---
+- name: vimのインストール
+  yum: name=vim state=installed

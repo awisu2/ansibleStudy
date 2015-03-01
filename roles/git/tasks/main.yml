@@ -1,0 +1,3 @@
+---
+- name: gitのインストール
+  yum: name=git state=installed

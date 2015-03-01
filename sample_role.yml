@@ -1,0 +1,9 @@
+---
+- hosts: me
+  remote_user: vagrant
+  sudo: yes
+  roles:
+    #- sample
+    #- echo
+    - vim
+    - git
