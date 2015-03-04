@@ -1,9 +1,14 @@
 ---
-- hosts: me
+- hosts: develop
   remote_user: vagrant
   sudo: yes
   roles:
     #- sample
     #- echo
-    - vim
-    - git
+    #- vim
+    #- git
+    #- { role: echo, tags: a }
+    - { role: common }
+    - { role: vim }
+    - { role: php }
+
