@@ -1,8 +1,6 @@
 ---
 - name: download
-  command: curl http://fuelphp.com/files/download/28 > /tmp/fuelphp.zip 
-  args:
-    creates: /tmp/fuelphp.zip
+  shell: curl http://fuelphp.com/files/download/28 > /tmp/fuelphp.zip 
 - name:  remove
   shell: rm -rf fuelphp-1.7.2
 - name: unzip

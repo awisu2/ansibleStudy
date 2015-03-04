@@ -3,14 +3,9 @@
   remote_user: vagrant
   sudo: yes
   roles:
-    #- sample
-    #- echo
-    #- vim
-    #- git
-    #- { role: echo, tags: a }
-    #- { role: common }
-    #- { role: vim }
-    #- { role: php }
-    #- { role: httpd }
+    - { role: common }
+    - { role: vim }
+    - { role: php }
+    - { role: httpd }
     - { role: fuelphp }
 
