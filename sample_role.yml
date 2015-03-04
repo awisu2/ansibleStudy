@@ -8,7 +8,9 @@
     #- vim
     #- git
     #- { role: echo, tags: a }
-    - { role: common }
-    - { role: vim }
-    - { role: php }
+    #- { role: common }
+    #- { role: vim }
+    #- { role: php }
+    #- { role: httpd }
+    - { role: fuelphp }
 
