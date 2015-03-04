@@ -1,0 +1,8 @@
+---
+- name: yum install httpd
+  yum: name=httpd state=installed
+- name: yum install httpd-devel
+  yum: name=httpd-devel state=installed
+- name: httpdを起動する
+  service: name=httpd state=running enabled=yes
+
