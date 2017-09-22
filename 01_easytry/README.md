@@ -31,11 +31,12 @@ ansible 192.168.33.99 -m ping
 we need set target in inventry file,
 please see `hosts` file
 
-#### 1. ping & hello world
+#### 1. ping & hello world(with multi)
 
 ```
 ansible 192.168.33.100 -m ping
 ansible 192.168.33.100 -m "shell echo 'hello world'"
+ansible 192.168.33.100,192.168.33.101 -m ping
 ```
 
 #### 2. with inventry file
@@ -44,6 +45,7 @@ ansible 192.168.33.100 -m "shell echo 'hello world'"
 
 ```
 ansible -i hosts myhosts -m ping
+ansible -i hosts myhosts2 -m ping
 ```
 
 it's can setting in ansible.cfg
@@ -54,7 +56,7 @@ ansible myhosts -m ping
 
 #### playbook hello world
 
-playbook is setting file so what we do.
+playbook is setting file(yaml) so what we do.
 
 ```
 ansible-playbook test.yml

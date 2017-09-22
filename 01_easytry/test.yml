@@ -1,4 +1,4 @@
-- hosts: myhosts
+- hosts: multi
   user: root
   tasks:
     - name: hello world.

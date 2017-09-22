@@ -1,5 +1,18 @@
 [myhosts]
 192.168.33.100
 
+[myhosts2]
+192.168.33.101
+
+[multi]
+192.168.33.100
+192.168.33.101
+
 [myhosts:vars]
+ansible_ssh_user=vagrant
+
+[myhosts2:vars]
+ansible_ssh_user=vagrant
+
+[multi:vars]
 ansible_ssh_user=vagrant
