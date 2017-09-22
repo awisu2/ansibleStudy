@@ -1,9 +1,0 @@
----
-- hosts: test
-  remote_user: vagrant
-  sudo: yes
-  tasks:
-    - name: yum packageの最新化
-      shell: echo "sub ok"
-
-

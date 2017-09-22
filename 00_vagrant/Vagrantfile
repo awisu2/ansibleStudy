@@ -1,0 +1,22 @@
+VAGRANTFILE_API_VERSION = "2"
+base={
+    :box => "centos/7",
+    :insert_key => false,
+}
+
+machines=[
+  {
+    :name => "machine1",
+    :ip => "192.168.33.100",
+  }
+]
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  machines.each do |machine|
+    config.vm.define machine[:name] do |node|
+      node.vm.box = machine.has_key?(:box) ? machine[:box] : base[:box]
+      config.vm.network "private_network", ip: machine[:ip]
+      config.ssh.insert_key = machine.has_key?(:insert_key) ? machine[:insert_key] : base[:insert_key]
+    end
+  end
+end

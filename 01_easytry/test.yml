@@ -1,0 +1,5 @@
+- hosts: myhosts
+  user: root
+  tasks:
+    - name: hello world.
+      debug: msg="hello world"

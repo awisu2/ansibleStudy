@@ -1,3 +1,0 @@
----
-- name: テンプレートをセット
-  action: template src=templates/sample.txt dest=/tmp/sample.txt

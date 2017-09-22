@@ -1,6 +1,0 @@
----
-- hosts: develop
-  remote_user: vagrant
-  sudo: yes
-  roles:
-    - { role: fuelphp }

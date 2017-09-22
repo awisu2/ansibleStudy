@@ -1,9 +1,0 @@
----
-- name: echoA
-  command: echo "{ a }"
-- name: echoB
-  tags: "b"
-  command: echo "{ b }"
-- name: echoC
-  tags: "c"
-  command: echo "{ c }"
