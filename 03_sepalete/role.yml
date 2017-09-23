@@ -1,0 +1,12 @@
+- hosts: myhosts
+  roles:
+    - test
+    - test2
+    - {role: test2, username: role01}
+  tasks:
+    - include_role:
+        name: test
+    - include_role:
+        name: test2
+      vars:
+        username: "role02"

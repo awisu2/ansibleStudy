@@ -1,0 +1,8 @@
+- hosts: myhosts
+  tasks:
+    - include_vars: includes/vars.yml
+    - include: includes/tasks.yml
+    - include: includes/tasks2.yml
+    - name: good bye
+      debug:
+        msg: "good bye {{msg}}"

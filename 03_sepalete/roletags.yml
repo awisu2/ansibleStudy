@@ -1,0 +1,8 @@
+- hosts: myhosts
+  roles:
+    - {role: test, tags: test}
+    - {role: test2, username: tag, tags: test2}
+  tasks:
+    - include_role:
+        name: test
+      tags: test,skip

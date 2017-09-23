@@ -18,8 +18,6 @@ cd 00_vagrant
 vagrant up
 ```
 
-### try
-
 ### 0. ping but it have warning
 
 it's echo `[WARNING]: No hosts matched, nothing to do`
@@ -61,6 +59,16 @@ playbook is setting file(yaml) so what we do.
 
 ```
 ansible-playbook test.yml
+```
+
+## info
+
+
+### escape ssh knownhost check
+this sample's ansible.cfg have "ssh_connection", it's escape sshe knownhost check.
+```
+[ssh_connection]
+ssh_args = -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
 ```
 
 

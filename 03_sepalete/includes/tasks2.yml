@@ -1,0 +1,3 @@
+---
+- name: goognight
+  debug: msg="goodnight {{msg}}"
