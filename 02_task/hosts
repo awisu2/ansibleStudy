@@ -1,0 +1,6 @@
+[myhosts]
+192.168.33.100
+
+[myhosts:vars]
+msg="goodnight"
+hostvar="hostvar"

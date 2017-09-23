@@ -1,5 +1,4 @@
 - hosts: multi
-  user: root
   tasks:
     - name: hello world.
       debug: msg="hello world"

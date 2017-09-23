@@ -1,0 +1,6 @@
+- hosts: myhosts
+  tasks:
+    - name: hello world.
+      debug: msg="{{msg}} {{username}}. {{msg2}}, hstvar={{hostvar}}"
+  vars_files:
+    - vars.yml

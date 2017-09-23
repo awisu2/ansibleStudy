@@ -20,7 +20,7 @@ vagrant up
 
 ### try
 
-### ping but is have warning
+### 0. ping but it have warning
 
 it's echo `[WARNING]: No hosts matched, nothing to do`
 
@@ -28,8 +28,8 @@ it's echo `[WARNING]: No hosts matched, nothing to do`
 ansible 192.168.33.99 -m ping
 ```
 
-we need set target in inventry file,
-please see `hosts` file
+we need set target in inventry file,  
+please see `hosts` file (not set 192.168.99)
 
 #### 1. ping & hello world(with multi)
 
@@ -41,14 +41,15 @@ ansible 192.168.33.100,192.168.33.101 -m ping
 
 #### 2. with inventry file
 
--i is inventry (default=/usr/local/etc/ansible/hosts)
+`-i` is inventry (default=/usr/local/etc/ansible/hosts)
 
 ```
 ansible -i hosts myhosts -m ping
 ansible -i hosts myhosts2 -m ping
 ```
 
-it's can setting in ansible.cfg
+it's can setting in ansible.cfg (please check ansible.cfg)  
+this command not use `-i`
 
 ```
 ansible myhosts -m ping

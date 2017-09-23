@@ -1,0 +1,16 @@
+- hosts: myhosts
+  sudo: yes
+  tasks:
+    - name: debug echo only bar
+      debug: msg="hello {{item}}"
+      with_items:
+        - "foo"
+        - "bar"
+        - "world"
+      when: item == "bar"
+    - name: yum update & install
+      yum: name="{{item}}"
+      with_items:
+        - "*"
+        - "@Development tools"
+        - "vim"
