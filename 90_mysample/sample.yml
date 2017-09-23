@@ -1,0 +1,8 @@
+- hosts: app
+  sudo: yes
+  pre_tasks:
+    - name: "echo stage"
+      debug:
+        msg: run on {{stage}}
+  roles:
+    - {role: update, tags: update}

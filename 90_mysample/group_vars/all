@@ -1,0 +1,5 @@
+STAGE_DEV: dev
+STAGE_PROD: prod
+
+MSG_START: start
+MSG_END: end

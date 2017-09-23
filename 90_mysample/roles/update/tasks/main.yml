@@ -1,0 +1,15 @@
+---
+- debug: {msg: "{{MSG_START}}"}
+- name: update & install
+  yum: name="{{item}}"
+  with_items:
+    - "*"
+    - "git"
+- name: install develop tools {{stage}}
+  yum: name="{{item}}"
+  with_items:
+    - "@Development tools"
+    - "vim"
+    - "wget"
+  when: stage == STAGE_DEV
+- debug: {msg: "{{MSG_END}}"}
