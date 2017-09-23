@@ -66,4 +66,13 @@ ansible-playbook roletags.yml --skip-tags skip
 ansible-playbook roletags.yml --tags test,test2 --skip-tags skip
 ```
 
+### useother role
 
+please show "role/userothenr" this sentence  
+dependence other role please wirte "meta/main.yml" `dependencies`  
+
+```
+ansible-playbook roleuseother.yml
+```
+
+this sample call "tasks/sub.yml" by `include`
